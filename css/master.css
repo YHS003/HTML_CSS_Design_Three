@@ -11,7 +11,50 @@
 /* End  Global Variables */
 
 /* Start Regular Used Components */
+.main-headings {
+    margin: 0 auto 80px;
+    text-transform: uppercase;
+    width: fit-content;
+    border: 3px solid black;
+    padding: 10px 20px;
+    z-index: 1;
+    position: relative;
+    transition-duration: var(--transition-duration);
+}
 
+.main-headings::before,
+.main-headings::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.main-headings::before {
+    left: -30px;
+}
+
+.main-headings:hover::before {
+    animation: right-move var(--transition-duration) linear forwards;
+}
+
+.main-headings::after {
+    right: -30px;
+}
+
+.main-headings:hover::after {
+    animation: left-move var(--transition-duration) linear forwards;
+}
+
+.main-headings:hover {
+    transition-delay: var(--transition-duration);
+    color: white;
+    border-color: white;
+}
 /* End Regular Used Components */
 
 /* Start Setup and Reset General Rules */
@@ -355,6 +398,38 @@ header .mega-menu .links li a i {
     }
     60% {
         transform: translateX(-50%) translateY(-15px);
+    }
+}
+
+@keyframes right-move {
+    50% {
+        left: 0;
+        width: 12px;
+        height: 12px;
+        z-index: -1;
+    }
+    100% {
+        border-radius: 0;
+        left: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+    }
+}
+
+@keyframes left-move {
+    50% {
+        right: 0;
+        width: 12px;
+        height: 12px;
+        z-index: -1;
+    }
+    100% {
+        border-radius: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
     }
 }
 /* End Animation Section */
