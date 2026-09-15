@@ -423,7 +423,8 @@ header .mega-menu .links li a i {
 }
 
 .articles .container .box:hover img {
-    transform: scale(1.1);
+    transform: translateY(-9.175px) scale(1.1);
+    /* 9.175 = (Height After Scale - Height Before Scale) / 2 */
 }
 
 .articles .container .box .content {
@@ -456,6 +457,7 @@ header .mega-menu .links li a i {
 .articles .container .box:hover .info i {
     animation: bounceRight var(--transition-duration) linear infinite;
 }
+
 /* End Articles Section */
 
 /* Start Animation Section */
@@ -534,4 +536,5 @@ header .mega-menu .links li a i {
         transform: translateX(8px);
     }
 }
+
 /* End Animation Section */
