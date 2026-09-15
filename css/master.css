@@ -423,15 +423,13 @@ header .mega-menu .links li a i {
 }
 
 .articles .container .box:hover img {
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .articles .container .box .content {
     padding: 20px;
     border-bottom: 2px solid #e6e6e7;
 }
-
-.articles .container .box .content h3 {}
 
 .articles .container .box .content p {
     line-height: var(--line-height);
