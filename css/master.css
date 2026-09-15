@@ -419,12 +419,12 @@ header .mega-menu .links li a i {
     width: 100%;
     /* Make Images Fit Box Size */
     max-width: 100%;
+    height: 183.45px;
     transition-duration: var(--transition-duration);
 }
 
 .articles .container .box:hover img {
-    transform: translateY(-9.175px) scale(1.1);
-    /* 9.175 = (Height After Scale - Height Before Scale) / 2 */
+    transform: translateY(calc(((183.45px * 1.1) - 183.45px) / -2)) scale(1.1);
 }
 
 .articles .container .box .content {
