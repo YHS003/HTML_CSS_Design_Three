@@ -8,7 +8,6 @@
     --main-padding-bottom: 100px;
     --section-background: #ececec;
 }
-
 /* End  Global Variables */
 
 /* Start Regular Used Components */
@@ -56,7 +55,6 @@
     color: white;
     border-color: white;
 }
-
 /* End Regular Used Components */
 
 /* Start Setup and Reset General Rules */
@@ -116,7 +114,6 @@ a {
         width: 1170px;
     }
 }
-
 /* End Setup and Reset General Rules */
 
 /* Start Header Section */
@@ -285,7 +282,6 @@ header .mega-menu .links li a {
 header .mega-menu .links li a i {
     margin-right: 10px;
 }
-
 /* End Header Section */
 
 /* Start Landing Section */
@@ -296,7 +292,7 @@ header .mega-menu .links li a i {
 .landing::before {
     content: '';
     position: absolute;
-    background-color: #ececec;
+    background-color: var(--section-background);
     width: 100%;
     height: 100%;
     left: 0;
@@ -382,7 +378,6 @@ header .mega-menu .links li a i {
 .landing .container .go-down:hover i {
     animation-play-state: paused;
 }
-
 /* End Landing Section */
 
 /* Start Articles Section */
@@ -457,8 +452,59 @@ header .mega-menu .links li a i {
 .articles .container .box:hover .info i {
     animation: bounceRight var(--transition-duration) linear infinite;
 }
-
 /* End Articles Section */
+
+/* Start Gallery Section */
+.gallery {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    background-color: var(--section-background);
+}
+
+.gallery .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.gallery .container .box {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%), 0px 2px 4px 0px rgb(0 0 0 / 12%);
+}
+
+.gallery .container .box .image {
+    position: relative;
+    overflow: hidden;
+    display: block; /* To Clear The White Gap Under Images */
+}
+
+.gallery .container .box .image::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    background-color: rgb(255 255 255 / 20%);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+}
+
+.gallery .container .box .image:hover::before  {
+    animation: flashing 0.7s;
+}
+
+.gallery .container .box .image img {
+    max-width: 100%;
+    transition-duration: var(--transition-duration);
+}
+
+.gallery .container .box .image:hover img { 
+    transform: scale(1.1);
+}
+/* End Gallery Section */
 
 /* Start Animation Section */
 @keyframes up-and-down {
@@ -537,4 +583,14 @@ header .mega-menu .links li a i {
     }
 }
 
+@keyframes flashing {
+    0%, 40% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        width: 200%;
+        height: 200%;
+    }
+}
 /* End Animation Section */
