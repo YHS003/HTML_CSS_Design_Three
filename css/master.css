@@ -476,7 +476,6 @@ header .mega-menu .links li a i {
 .gallery .container .box .image {
     position: relative;
     overflow: hidden;
-    display: block; /* To Clear The White Gap Under Images */
 }
 
 .gallery .container .box .image::before {
@@ -497,6 +496,7 @@ header .mega-menu .links li a i {
 }
 
 .gallery .container .box .image img {
+    display: block; /* To Clear The White Gap Under Images */
     max-width: 100%;
     transition-duration: var(--transition-duration);
 }
