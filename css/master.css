@@ -685,7 +685,7 @@ header .mega-menu .links li a i {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     transition-duration: var(--transition-duration);
-    transform: scale(1.08);
+    transform: scale(1.05);
     opacity: 0;
     pointer-events: none;
 }
@@ -748,7 +748,181 @@ header .mega-menu .links li a i {
 /* End Testimonials Section */
 
 /* Start Team Members Section */
+.team {
+    padding-top: var(--main-padding-top);
+    padding-bottom: var(--main-padding-bottom);
+    position: relative;
+}
 
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.team .container .box {
+    position: relative;
+}
+
+.team .container .box::before,
+.team .container .box::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    right: 0;
+    top: 0;
+}
+
+.team .container .box::before {
+    width: calc(100% - 60px);
+    background-color: #f3f3f3;
+    z-index: -2;
+}
+
+.team .container .box::after {
+    width: 0;
+    z-index: -1;
+    background-color: #e4e4e4;
+    transition-duration: var(--transition-duration);
+}
+
+.team .container .box:hover::after {
+    width: calc(100% - 60px);
+}
+
+.team .container .box .data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.team .container .box .data .social {
+    width: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.team .container .box .data .social a {
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition-duration: var(--transition-duration);
+}
+
+.team .container .box .data .social a:first-of-type:hover {
+    background-color: #1877f2;
+}
+
+.team .container .box .data .social a:nth-of-type(2):hover {
+    background-color: black;
+}
+
+.team .container .box .data .social a:nth-of-type(3):hover {
+    background-color: #0a66c2;
+}
+
+.team .container .box .data .social a:last-of-type:hover {
+    background-color: red;
+}
+
+.team .container .box .data .social a i {
+    color: #777777;
+    transition-duration: var(--transition-duration);
+}
+
+.team .container .box .data .social a:hover i {
+    color: white;
+}
+
+.team .container .box .data img {
+    width: calc(100% - 60px);
+    border-radius: 10px;
+    transition-duration: var(--transition-duration);
+}
+
+.team .container .box:hover .data img {
+    filter: grayscale(100%);
+}
+
+.team .container .box .info {
+    padding-left: 80px;
+}
+
+.team .container .box .info h3 {
+    margin: 10px 0 10px;
+    color: var(--main-color);
+    font-size: 22px;
+    transition-duration: var(--transition-duration);
+}
+
+.team .container .box .info p {
+    margin-bottom: 15px;
+}
+
+.team .container .box:hover .info h3 {
+    color: #777777;
+}
+
+@media (max-width: 767px) {
+    .team .container .box::before {
+        width: 100%;
+    }
+
+    .team .container .box:hover::after {
+        width: 100%;
+    }
+
+    .team .container .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .team .container .box .data {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+
+    .team .container .box .data img {
+        display: block;
+        width: 85%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .team .container .box .data .social {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 15px;
+    }
+
+    .team .container .box .data .social a {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+    }
+
+    .team .container .box .info {
+        width: 100%;
+        padding-left: 0;
+        text-align: center;
+    }
+}
 /* End Team Members Section */
 
 /* Start Animation Section */
