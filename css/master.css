@@ -1803,6 +1803,7 @@ footer {
     background-color: #191919;
     padding-top: var(--main-padding-top);
     color: #b9b9b9;
+    position: relative;
 }
 
 footer .container {
@@ -1948,6 +1949,27 @@ footer .copyright {
     border-top: 3px solid #444444;
     font-size: 18px;
     font-weight: bold;
+}
+
+footer .scroll-top {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--main-color);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    transition-duration: var(--transition-duration);
+    text-decoration: none;
+}
+
+footer .scroll-top:hover {
+    background-color: var(--main-color-alt);
+    color: white;
 }
 
 /* End Footer Section */
