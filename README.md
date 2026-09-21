@@ -340,7 +340,7 @@ cd HTML_CSS_Design_Three
 
 The project can be opened directly in a browser or run using a local development server such as **Live Server** in VS Code.
 
-> **Note:** The repository is currently private, so GitHub access is required to clone it.
+> **Note:** The repository was private, so GitHub access was required to clone it.
 
 ## Author
 
