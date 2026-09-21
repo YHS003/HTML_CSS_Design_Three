@@ -57,6 +57,23 @@
     border-color: white;
 }
 
+.spikes {
+    position: relative;
+}
+
+.spikes::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    z-index: 1;
+    background-image: 
+    linear-gradient(135deg, white 25%, transparent 25%), 
+    linear-gradient(225deg, white 25%, transparent 25%);
+    background-size: 30px 30px;
+}
+
 /* End Regular Used Components */
 
 /* Start Setup and Reset General Rules */
@@ -1661,7 +1678,7 @@ header .mega-menu .links li a i {
 
 /* Start Discount Section */
 .discount {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-wrap: wrap;
 }
@@ -1780,6 +1797,160 @@ header .mega-menu .links li a i {
 }
 
 /* End Discount Section */
+
+/* Start Footer Section */
+footer {
+    background-color: #191919;
+    padding-top: var(--main-padding-top);
+    color: #b9b9b9;
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+footer .container .box h3 {
+    font-weight: 900;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+footer .container .box ul.social {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+footer .container .box ul.social li {
+    width: 50px;
+    height: 50px;
+    background-color: #313131;
+    transition-duration: var(--transition-duration);
+}
+
+footer .container .box ul.social li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container .box ul.social li.facebook-icon:hover {
+    background-color: #1877f2;
+}
+
+footer .container .box ul.social li.x-icon:hover {
+    background-color: black;
+}
+
+footer .container .box ul.social li.youtube-icon:hover {
+    background-color: red;
+}
+
+footer .container .box ul.social li i {
+    color: #b9b9b9;
+    transition-duration: var(--transition-duration);
+}
+
+footer .container .box ul.social li:hover i {
+    color: white;
+}
+
+footer .container .box p.text {
+    line-height: var(--line-height);
+}
+
+footer .container .box ul.links li {
+    padding: 15px 0;
+    transition-duration: var(--transition-duration);
+}
+
+footer .container .box ul.links li:not(:last-child) {
+    border-bottom: 3px solid #444444;
+}
+
+footer .container .box ul.links li a {
+    color: #b9b9b9;
+    display: block;
+    transition-duration: var(--transition-duration);
+}
+
+footer .container .box ul.links li:hover a {
+    color: white;
+    padding-left: 10px;
+}
+
+footer .container .box ul.links li a::before {
+    font-family: "Font Awesome 5 Free";
+    content: "\F101";
+    font-weight: 900;
+    margin-right: 10px;
+    color: var(--main-color);
+}
+
+footer .container .box .line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+footer .container .box .line .info {
+    line-height: var(--line-height);
+}
+
+footer .container .box .line .info span {
+    display: block;
+}
+
+footer .container .box .line i {
+    margin-right: 10px;
+    color: var(--main-color);
+    font-size: 25px;
+}
+
+footer .container .box img {
+    display: inline-block;
+    width: 78px;
+    border: 3px solid white;
+    margin: 2px;
+    opacity: 0.8;
+    transition-duration: var(--transition-duration);
+}
+
+footer .container .box img:hover {
+    transform: scale(1.1);
+    border-color: var(--main-color);
+    opacity: 1;
+}
+
+@media (max-width: 991px) {
+    footer {
+        text-align: center;
+    }
+
+    footer .container .box ul.social {
+        justify-content: center;
+    }
+
+    footer .container .box .line {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+footer .copyright {
+    text-align: center;
+    padding: 25px 0;
+    margin-top: 50px;
+    border-top: 3px solid #444444;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* End Footer Section */
 
 /* Start Animation Section */
 @keyframes up-and-down {
