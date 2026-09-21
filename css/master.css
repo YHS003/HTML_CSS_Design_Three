@@ -8,6 +8,7 @@
     --main-padding-bottom: 100px;
     --section-background: #ececec;
 }
+
 /* End  Global Variables */
 
 /* Start Regular Used Components */
@@ -55,6 +56,7 @@
     color: white;
     border-color: white;
 }
+
 /* End Regular Used Components */
 
 /* Start Setup and Reset General Rules */
@@ -114,6 +116,7 @@ a {
         width: 1170px;
     }
 }
+
 /* End Setup and Reset General Rules */
 
 /* Start Header Section */
@@ -282,6 +285,7 @@ header .mega-menu .links li a {
 header .mega-menu .links li a i {
     margin-right: 10px;
 }
+
 /* End Header Section */
 
 /* Start Landing Section */
@@ -378,6 +382,7 @@ header .mega-menu .links li a i {
 .landing .container .go-down:hover i {
     animation-play-state: paused;
 }
+
 /* End Landing Section */
 
 /* Start Articles Section */
@@ -452,6 +457,7 @@ header .mega-menu .links li a i {
 .articles .container .box:hover .info i {
     animation: bounceRight var(--transition-duration) linear infinite;
 }
+
 /* End Articles Section */
 
 /* Start Gallery Section */
@@ -491,19 +497,21 @@ header .mega-menu .links li a i {
     z-index: 2;
 }
 
-.gallery .container .box .image:hover::before  {
+.gallery .container .box .image:hover::before {
     animation: flashing 0.7s;
 }
 
 .gallery .container .box .image img {
-    display: block; /* To Clear The White Gap Under Images */
+    display: block;
+    /* To Clear The White Gap Under Images */
     max-width: 100%;
     transition-duration: var(--transition-duration);
 }
 
-.gallery .container .box .image:hover img { 
+.gallery .container .box .image:hover img {
     transform: scale(1.1);
 }
+
 /* End Gallery Section */
 
 /* Start Features Section */
@@ -550,11 +558,13 @@ header .mega-menu .links li a i {
 
 .features .container .box:hover .img-holder::after {
     border-width: 150px 700px 150px 0;
-    border-color: transparent transparent white transparent;    ;
+    border-color: transparent transparent white transparent;
+    ;
 }
 
 .features .container .box img {
-    display: block; /* To Clear The White Gap Under Images */
+    display: block;
+    /* To Clear The White Gap Under Images */
     max-width: 100%;
 }
 
@@ -646,6 +656,7 @@ header .mega-menu .links li a i {
     color: white;
     background-position: left bottom;
 }
+
 /* End Features Section */
 
 /* Start Testimonials Section */
@@ -745,6 +756,7 @@ header .mega-menu .links li a i {
     line-height: var(--line-height);
     color: #777777;
 }
+
 /* End Testimonials Section */
 
 /* Start Team Members Section */
@@ -923,6 +935,7 @@ header .mega-menu .links li a i {
         text-align: center;
     }
 }
+
 /* End Team Members Section */
 
 /* Start Services Section */
@@ -968,14 +981,14 @@ header .mega-menu .links li a i {
     width: 100%;
 }
 
-.services .container .box > i {
+.services .container .box>i {
     display: block;
     margin: 30px auto 20px;
     text-align: center;
-    color:#d5d5d5;
+    color: #d5d5d5;
 }
 
-.services .container .box > h3 {
+.services .container .box>h3 {
     text-align: center;
     font-size: 1.5rem;
     color: var(--main-color);
@@ -1022,6 +1035,7 @@ header .mega-menu .links li a i {
     color: var(--main-color);
     transition-duration: var(--transition-duration);
 }
+
 /* End Services Section */
 
 /* Start Skills Section */
@@ -1084,10 +1098,12 @@ header .mega-menu .links li a i {
         display: flex;
         flex-direction: column;
     }
+
     .our-skills .container .skills {
         width: 100%;
     }
 }
+
 /* End Skills Section */
 
 /* Start Work Steps Section */
@@ -1165,6 +1181,7 @@ header .mega-menu .links li a i {
     line-height: var(--line-height);
     margin-top: 10px;
 }
+
 /* End Work Steps Section */
 
 /* Start Events Section */
@@ -1324,6 +1341,7 @@ header .mega-menu .links li a i {
         font-size: 14px;
     }
 }
+
 /* End Events Section */
 
 /* Start Pricing Section */
@@ -1470,6 +1488,7 @@ header .mega-menu .links li a i {
     background-position: left bottom;
     color: white;
 }
+
 /* End Pricing Section */
 
 /* Start Videos Section */
@@ -1548,6 +1567,7 @@ header .mega-menu .links li a i {
     padding: 20px;
     margin-top: 10px;
 }
+
 /* End Videos Section */
 
 /* Start Stats Section */
@@ -1636,7 +1656,130 @@ header .mega-menu .links li a i {
     font-weight: bold;
     color: #777777;
 }
+
 /* End Stats Section */
+
+/* Start Discount Section */
+.discount {
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.discount .image {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-image: url(../assets/discount-background1.jpg);
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+    animation: change-background 10s linear infinite;
+}
+
+.discount .image::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1786e0fa;
+    z-index: -1;
+}
+
+.discount .image img {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    margin: 0 auto;
+    animation: up-and-down 5s linear infinite;
+}
+
+.discount .form {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount .form .input {
+    display: block;
+    margin-bottom: 15px;
+    padding: 20px;
+    border: none;
+    background-color: #f9f9f9;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent transparent #cccccc transparent;
+    caret-color: var(--main-color);
+    width: 100%;
+    transition-duration: var(--transition-duration);
+}
+
+.discount .form textarea.input {
+    resize: none;
+    height: 200px;
+}
+
+.discount .form .input:focus {
+    outline: none;
+    border-color: var(--main-color);
+}
+
+.discount .form input[type="submit"] {
+    width: 100%;
+    background-color: var(--main-color);
+    color: white;
+    font-weight: bold;
+    padding: 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    transition-duration: var(--transition-duration);
+}
+
+.discount .form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+
+.discount .content {
+    text-align: center;
+    padding: 0 20px;
+}
+
+.discount .content h2 {
+    margin-bottom: 20px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 40px;
+}
+
+.discount .content p {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-width: 500px;
+    line-height: var(--line-height);
+    font-size: 18px
+}
+
+@media (max-width: 991px) {
+    .discount .image {
+        flex-basis: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    .discount .form {
+        flex-basis: 100%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+/* End Discount Section */
 
 /* Start Animation Section */
 @keyframes up-and-down {
@@ -1716,9 +1859,12 @@ header .mega-menu .links li a i {
 }
 
 @keyframes flashing {
-    0%, 40% {
+
+    0%,
+    40% {
         opacity: 1;
     }
+
     100% {
         opacity: 0;
         width: 200%;
@@ -1731,4 +1877,17 @@ header .mega-menu .links li a i {
         width: 0;
     }
 }
+
+@keyframes change-background {
+
+    0%,
+    100% {
+        background-image: url(../assets/discount-background1.jpg);
+    }
+
+    50% {
+        background-image: url(../assets/discount-background2.jpg);
+    }
+}
+
 /* End Animation Section */
